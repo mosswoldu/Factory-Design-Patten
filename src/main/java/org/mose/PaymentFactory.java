@@ -8,15 +8,17 @@ public class PaymentFactory {
             case CREDITCARD -> {
                 return new CreditCardPayment();
             }
-//            case PAYPAL -> {
-//                return new PayPalPayment();
-//            }
-//            case GOOGLEPAY -> {
-//                return new GooglePayPayment();
-//            }
-//            case APPLEPAY -> {
-//                return new ApplePayPayment();
-//            }
+//            case CREDITCARD:
+//                return new CreditCardPayment();
+            case PAYPAL -> {
+                return new PayPalPayment();
+            }
+            case GOOGLEPAY -> {
+                return new GooglePayPayment();
+            }
+            case APPLEPAY -> {
+                return new ApplePayPayment();
+            }
             default -> throw new ClassNotFoundException(MessageFormat.format(
                     "{0} is not currently supported as a payment method.", paymentMethod
             ));
